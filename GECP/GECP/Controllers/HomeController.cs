@@ -1,11 +1,14 @@
 ﻿using GECP.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
+using static GECP.Constants.Routes;
 
 namespace GECP.Controllers
 {
@@ -28,9 +31,27 @@ namespace GECP.Controllers
             return View();
         }
 
-        public IActionResult About()
+        public async Task<IActionResult> AboutAsync()
         {
-            return View();
+            List<AboutUsModel> listuser = new List<AboutUsModel>();
+            AboutUsModel users;
+
+            var http = HttpClientFactory.Create();
+            HttpResponseMessage httpResponseMessage = await http.GetAsync(AbouteRoutes.GetDetails);
+
+            var content = httpResponseMessage.Content;
+
+            string mycontent = await content.ReadAsStringAsync();
+            AboutUsModel[] items = JsonConvert.DeserializeObject<AboutUsModel[]>(mycontent);
+
+            foreach(var val in items)
+            {
+                listuser.Add(val);
+            }
+            //var data = await  http.GetStringAsync(AbouteRoutes.GetDetails);
+
+            
+            return View(listuser);
         }
         public IActionResult Coe()
         {

@@ -1,23 +1,19 @@
-﻿@{
+﻿@model List<AboutUsModel>
+
+@{
     ViewBag.Title = "AboutUs";
 }
-
 
 <div class="page_title3">
     <div class="container">
 
         <h1>
             About Us <em>Government Engineering College</em>
-
         </h1>
         <div class="line"></div>
     </div>
 </div>
 <!-- end page title -->
-
-
-
-
 
 <div class="content_fullwidth">
 
@@ -27,14 +23,18 @@
 
             <div id="owl-demo2" class="owl-carousel">
 
-                <div><img src="~/images/college.jpg" alt="" class="rimg"></div>
+                @foreach (var item in Model)
+                {
+                    <div><img src=@item.about_image alt="" class="rimg"></div>
+                }
+
+
+                @*<div><img src="~/images/college.jpg" alt="" class="rimg"></div>*@
 
                 <div><img src="~/images/college_gate.jpg" alt="" class="rimg"></div>
 
                 <div><img src="~/images/convocation.jpg" alt="" class="rimg"></div>
-
             </div>
-
         </div>
         <!-- end section -->
 

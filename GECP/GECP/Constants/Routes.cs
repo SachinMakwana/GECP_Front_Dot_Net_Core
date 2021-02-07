@@ -8,9 +8,12 @@ namespace GECP.Constants
     public class Routes
     {
         const string BaseURL = "http://localhost:3000";
-        public class AbouteRoutes
+        public class AboutRoutes
         {
-            public static string GetDetails => BaseURL + "/college";
+            public static string GetAboutUsDetails => BaseURL + "/college";
+
+            public static string GetMessageOFCommitte => BaseURL + "/getMessage";
+
         }
     }
 }

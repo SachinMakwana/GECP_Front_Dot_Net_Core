@@ -1,19 +1,30 @@
-﻿@model List<AboutUsModel>
+<<<<<<< Updated upstream
+﻿@{
+=======
+﻿@*@model Task<IEnumerable<GECP.Models.Pages.AboutUsPageModel>>*@
+@model IList<GECP.Models.Pages.AboutUsPageModel>
 
 @{
+>>>>>>> Stashed changes
     ViewBag.Title = "AboutUs";
 }
+
 
 <div class="page_title3">
     <div class="container">
 
         <h1>
             About Us <em>Government Engineering College</em>
+
         </h1>
         <div class="line"></div>
     </div>
 </div>
 <!-- end page title -->
+
+
+
+
 
 <div class="content_fullwidth">
 
@@ -23,18 +34,24 @@
 
             <div id="owl-demo2" class="owl-carousel">
 
-                @foreach (var item in Model)
+<<<<<<< Updated upstream
+                <div><img src="~/images/college.jpg" alt="" class="rimg"></div>
+=======
+                @*@foreach (var item in Model)
                 {
-                    <div><img src=@item.about_image alt="" class="rimg"></div>
-                }
+                    <div><img src=@ alt="" class="rimg"></div>
+                }*@
 
 
                 @*<div><img src="~/images/college.jpg" alt="" class="rimg"></div>*@
+>>>>>>> Stashed changes
 
                 <div><img src="~/images/college_gate.jpg" alt="" class="rimg"></div>
 
                 <div><img src="~/images/convocation.jpg" alt="" class="rimg"></div>
+
             </div>
+
         </div>
         <!-- end section -->
 
@@ -71,6 +88,8 @@
             <div class="text animate" data-anim-type="fadeIn" data-anim-delay="500">
 
                 <h1>Principal's Message</h1>
+                <h1>@Model</h1>
+
 
                 <p>
                     Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for lorem ipsum evolved over the years somietimes by accident sometimes on purpose.

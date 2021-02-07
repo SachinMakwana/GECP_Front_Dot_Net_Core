@@ -1,24 +1,28 @@
 ﻿using GECP.Models;
+using GECP.Models.Pages;
+using GECP.Repository;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Net.Http;
 using System.Threading.Tasks;
-using static GECP.Constants.Routes;
 
 namespace GECP.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private IAboutUs _aboutUs;
+
+
+
 
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
+            _aboutUs = new AboutUs();
         }
 
         public IActionResult Index()
@@ -31,27 +35,18 @@ namespace GECP.Controllers
             return View();
         }
 
-        public async Task<IActionResult> AboutAsync()
+        public IActionResult About()
         {
-            List<AboutUsModel> listuser = new List<AboutUsModel>();
-            AboutUsModel users;
+<<<<<<< Updated upstream
+            return View();
+=======
+            AboutUsPageModel abt = new AboutUsPageModel();
+            var obj = _aboutUs.getAboutUsPageDetail();
 
-            var http = HttpClientFactory.Create();
-            HttpResponseMessage httpResponseMessage = await http.GetAsync(AbouteRoutes.GetDetails);
-
-            var content = httpResponseMessage.Content;
-
-            string mycontent = await content.ReadAsStringAsync();
-            AboutUsModel[] items = JsonConvert.DeserializeObject<AboutUsModel[]>(mycontent);
-
-            foreach(var val in items)
-            {
-                listuser.Add(val);
-            }
-            //var data = await  http.GetStringAsync(AbouteRoutes.GetDetails);
-
+            return View(obj);
+            //move to about us Repo
             
-            return View(listuser);
+>>>>>>> Stashed changes
         }
         public IActionResult Coe()
         {

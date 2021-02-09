@@ -10,6 +10,7 @@ namespace GECP.Constants
         const string BaseURL = "http://localhost:3000";
         public class AboutRoutes
         {
+            
             public static string GetAboutUsDetails => BaseURL + "/college";
 
             public static string GetMessageOFCommitte => BaseURL + "/getMessage";

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "d4AzSkfzOUK7DD2rJMQyoveeYgrHrKdGvrves5Ba39KzRPQDLBF7LaZm5sFOWllmV2SJ9WDccYpxZmoGxa2dkA==",
+  "dgSpecHash": "I8BtgW5ENVrm7U67Q78rXomqcJnThUAnj4tQkW/bHjZTXCEl1EKMDhdP1KcwCHdiY39PBcOBEvjC2lwaUV2JuA==",
   "success": true,
   "projectFilePath": "C:\\Users\\darji\\Documents\\GitHub\\GECP_Front_Dot_Net_Core\\GECP\\GECP\\GECP.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\darji\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.7\\microsoft.aspnet.webapi.client.5.2.7.nupkg.sha512",
     "C:\\Users\\darji\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\darji\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
     "C:\\Users\\darji\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\3.1.0\\microsoft.aspnetcore.razor.language.3.1.0.nupkg.sha512",
@@ -29,6 +30,7 @@
     "C:\\Users\\darji\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\darji\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\darji\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\darji\\.nuget\\packages\\newtonsoft.json.bson\\1.0.1\\newtonsoft.json.bson.1.0.1.nupkg.sha512",
     "C:\\Users\\darji\\.nuget\\packages\\nuget.frameworks\\4.7.0\\nuget.frameworks.4.7.0.nupkg.sha512",
     "C:\\Users\\darji\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\darji\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",

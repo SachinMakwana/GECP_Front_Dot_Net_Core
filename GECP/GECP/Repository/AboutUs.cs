@@ -12,10 +12,10 @@ using Newtonsoft.Json;
 
 namespace GECP.Repository
 {
-    public class AboutUs : Common, IAboutUs
+    public class AboutUs : Common,IAboutUs
     {
         
-        public async Task<IList<AboutUsPageModel>> getAboutUsPageDetail()
+        public async Task<AboutUsPageModel> getAboutUsPageDetail()
         { 
             var http = HttpClientFactory.Create();
             var id = (int)Pages.AboutUs;
@@ -27,9 +27,9 @@ namespace GECP.Repository
             MessageModel items = JsonConvert.DeserializeObject<MessageModel>(mycontent);
 
             AboutUsPageModel aboutUsPageModel = new AboutUsPageModel();
-            aboutUsPageModel.MsgCmtModels.Add(items);
+            aboutUsPageModel.MsgCmtModel = items;
 
-            return (IList<AboutUsPageModel>)aboutUsPageModel;
+            return aboutUsPageModel;
 
             /*List<AboutUsModel> listuser = new List<AboutUsModel>();
             AboutUsModel users;

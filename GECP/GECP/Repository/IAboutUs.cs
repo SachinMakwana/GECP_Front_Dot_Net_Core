@@ -10,7 +10,7 @@ namespace GECP.Repository
     public interface IAboutUs
     {
 
-        public Task<IList<AboutUsPageModel>> getAboutUsPageDetail();
+        public Task<AboutUsPageModel> getAboutUsPageDetail();
     }
 
 }

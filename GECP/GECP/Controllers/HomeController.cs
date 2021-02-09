@@ -37,16 +37,12 @@ namespace GECP.Controllers
 
         public IActionResult About()
         {
-<<<<<<< Updated upstream
-            return View();
-=======
+
             AboutUsPageModel abt = new AboutUsPageModel();
             var obj = _aboutUs.getAboutUsPageDetail();
 
             return View(obj);
             //move to about us Repo
-            
->>>>>>> Stashed changes
         }
         public IActionResult Coe()
         {

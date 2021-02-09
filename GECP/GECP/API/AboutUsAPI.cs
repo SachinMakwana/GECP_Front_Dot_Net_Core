@@ -10,7 +10,7 @@ namespace GECP.API
         public async void getAboutUS()
         {
             var http = HttpClientFactory.Create();
-            HttpResponseMessage httpResponseMessage = await http.GetAsync(AbouteRoutes.GetDetails);
+            HttpResponseMessage httpResponseMessage = await http.GetAsync(AboutRoutes.GetAboutUsDetails);
 
             var content = httpResponseMessage.Content;
             

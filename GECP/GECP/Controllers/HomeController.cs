@@ -42,7 +42,6 @@ namespace GECP.Controllers
             var obj = _aboutUs.getAboutUsPageDetail();
 
             return View(obj);
-            //move to about us Repo
         }
         public IActionResult Coe()
         {

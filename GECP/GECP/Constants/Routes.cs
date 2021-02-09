@@ -15,6 +15,9 @@ namespace GECP.Constants
 
             public static string GetMessageOFCommitte => BaseURL + "/getMessage";
 
+            public static string GetAlumniDetails => BaseURL + "/getAlumnis";
+
+
         }
     }
 }

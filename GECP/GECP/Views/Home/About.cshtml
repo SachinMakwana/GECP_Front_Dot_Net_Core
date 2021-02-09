@@ -122,63 +122,145 @@
     <!-- end featured section 14 -->
 
     <div class="divider_line11dept"></div>
-
-
-    <div class="featured_section46">
+    <div class="parallax_section1">
         <div class="container">
 
-            <h2 class="title27 roboto">
-                Alumuns Says
-                <!-- <div class="line"></div> -->
-            </h2>
+            <div class="flexslider carousel">
+                <ul class="slides">
 
+                    @{
+                        var data = Model.Result.Alumnis;
+                    }
+                    @for (int i = 0; i < data.Count; i++)
+                    {
+                        <li>
+                            <img src=@data[i].Image alt="" />
+                            <h5>@data[i].Name</h5>
 
+                            <p>
+                                @data[i].Feedback
+                            </p>
+                        </li>
+                    }
 
-            <div class="one_half animate" data-anim-type="fadeInLeft" data-anim-delay="200">
-                <div class="bubble">
+                    <!--<li>
 
-                    <img src="~/images/peop-img27.jpg" alt="" />
+                        <img src="images/peop-img7.jpg" alt="" />
+                        <h5>Austin Lisandro <em>- websitename -</em></h5>
 
-                    <p>
-                        Generators on the Internet tend to repeat predefined chunks as necessary, making this the first true evere generator on the Internet. It uses a dictionary of over 200 Latin words, combined with generate Lorem Ipsum which looks
-                        reasonable. The generated Lorem Ipsum pass reasonable websites is therefore always.
-                    </p>
+                        <p>
+                            Established fact that a reader will be distracted by the readable content of a page when looking at its layout. andthere for an search for lorem ipsum will uncover many web sites still in their infancy various versions thereforealways
+                            have evolved over the years.
+                        </p>
 
-                    <div class="clearfix"></div>
-                </div>
+                    </li>-->
+                    <!-- end slide -->
+                    <!--<li>
 
-                <strong>
-                    Michile Johnson
-                    <em>client websitename.com</em>
-                </strong>
+                        <img src="images/peop-img8.jpg" alt="" />
+                        <h5>Alana Kasandra <em>- websitename -</em></h5>
 
+                        <p>
+                            Established fact that a reader will be distracted by the readable content of a page when looking at its layout. andthere for an search for lorem ipsum will uncover many web sites still in their infancy various versions thereforealways
+                            have evolved over the years.
+                        </p>
+
+                    </li>-->
+                    <!-- end slide -->
+                    <!--<li>
+
+                        <img src="images/peop-img9.jpg" alt="" />
+                        <h5>Jorge Anthony <em>- websitename -</em></h5>
+
+                        <p>
+                            Established fact that a reader will be distracted by the readable content of a page when looking at its layout. andthere for an search for lorem ipsum will uncover many web sites still in their infancy various versions thereforealways
+                            have evolved over the years.
+                        </p>
+
+                    </li>-->
+                    <!-- end slide -->
+                    <!--<li>
+
+                        <img src="images/peop-img10.jpg" alt="" />
+                        <h5>Fernanda Elyse <em>- websitename -</em></h5>
+
+                        <p>
+                            Established fact that a reader will be distracted by the readable content of a page when looking at its layout. andthere for an search for lorem ipsum will uncover many web sites still in their infancy various versions thereforealways
+                            have evolved over the years.
+                        </p>
+
+                    </li>-->
+                    <!-- end slide -->
+                    <!--<li>
+
+                        <img src="images/peop-img11.jpg" alt="" />
+                        <h5>Anthony Alana <em>- websitename -</em></h5>
+
+                        <p>
+                            Established fact that a reader will be distracted by the readable content of a page when looking at its layout. andthere for an search for lorem ipsum will uncover many web sites still in their infancy various versions thereforealways
+                            have evolved over the years.
+                        </p>
+
+                    </li>-->
+                    <!-- end slide -->
+
+                </ul>
             </div>
-            <!-- end section -->
-
-            <div class="one_half last animate" data-anim-type="fadeInRight" data-anim-delay="200">
-                <div class="bubble">
-
-                    <img src="~/images/peop-img28.jpg" alt="" />
-
-                    <p>
-                        Generators on the Internet tend to repeat predefined chunks as necessary, making this the first true evere generator on the Internet. It uses a dictionary of over 200 Latin words, combined with generate Lorem Ipsum which looks
-                        reasonable. The generated Lorem Ipsum pass reasonable websites is therefore always.
-                    </p>
-
-                    <div class="clearfix"></div>
-                </div>
-
-                <strong>
-                    Alana Kasandra
-                    <em>client websitename.com</em>
-                </strong>
-
-            </div>
-            <!-- end section -->
-
 
         </div>
     </div>
+    <!-- end parallax section 1 -->
+    <!--<div class="featured_section46">
+        <div class="container">
+
+            <h2 class="title27 roboto">
+                Alumuns Says-->
+    <!-- <div class="line"></div> -->
+    <!--</h2>
+
+
+    <div class="one_half animate" data-anim-type="fadeInLeft" data-anim-delay="200">
+        <div class="bubble">
+
+            <img src="~/images/peop-img27.jpg" alt="" />
+
+            <p>
+                Generators on the Internet tend to repeat predefined chunks as necessary, making this the first true evere generator on the Internet. It uses a dictionary of over 200 Latin words, combined with generate Lorem Ipsum which looks
+                reasonable. The generated Lorem Ipsum pass reasonable websites is therefore always.
+            </p>
+
+            <div class="clearfix"></div>
+        </div>
+
+        <strong>
+            Michile Johnson
+            <em>client websitename.com</em>
+        </strong>
+
+    </div>-->
+    <!-- end section -->
+    <!--<div class="one_half last animate" data-anim-type="fadeInRight" data-anim-delay="200">
+        <div class="bubble">
+
+            <img src="~/images/peop-img28.jpg" alt="" />
+
+            <p>
+                Generators on the Internet tend to repeat predefined chunks as necessary, making this the first true evere generator on the Internet. It uses a dictionary of over 200 Latin words, combined with generate Lorem Ipsum which looks
+                reasonable. The generated Lorem Ipsum pass reasonable websites is therefore always.
+            </p>
+
+            <div class="clearfix"></div>
+        </div>
+
+        <strong>
+            Alana Kasandra
+            <em>client websitename.com</em>
+        </strong>
+
+    </div>-->
+    <!-- end section -->
+    <!--</div>
+    </div>-->
 </div>
 <!-- end featured section 46 -->
 <div class="clearfix margin_top2"></div>

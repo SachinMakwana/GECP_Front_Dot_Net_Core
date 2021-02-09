@@ -18,9 +18,10 @@ namespace GECP.Repository
         public async Task<AboutUsPageModel> getAboutUsPageDetail()
         { 
             var http = HttpClientFactory.Create();
-            var id = (int)Pages.AboutUs;
+            int id = (int)Pages.AboutUs;
 
-            HttpResponseMessage httpResponseMessage = await http.GetAsync(AboutRoutes.GetMessageOFCommitte + "?PageId=" + (int)Pages.AboutUs);
+            //Message Of Committee
+            HttpResponseMessage httpResponseMessage = await http.GetAsync(AboutRoutes.GetMessageOFCommitte + "?PageId=" + id);
 
             var content = httpResponseMessage.Content;
             string mycontent = await content.ReadAsStringAsync();
@@ -29,29 +30,16 @@ namespace GECP.Repository
             AboutUsPageModel aboutUsPageModel = new AboutUsPageModel();
             aboutUsPageModel.MsgCmtModel = items;
 
+            //Feedback Of People
+            HttpResponseMessage httpResponsePeople = await http.GetAsync(AboutRoutes.GetAlumniDetails + "?PageId=" + id);
+
+            var peopleContent = httpResponsePeople.Content;
+            string myPeopleContent = await peopleContent.ReadAsStringAsync();
+            List<Alumni> peopleitems = JsonConvert.DeserializeObject<List<Alumni>>(myPeopleContent);
+
+            aboutUsPageModel.Alumnis = peopleitems;
+
             return aboutUsPageModel;
-
-            /*List<AboutUsModel> listuser = new List<AboutUsModel>();
-            AboutUsModel users;
-            AboutUsPageModel aboutUsPageModel = new AboutUsPageModel();
-
-            //HttpResponseMessage httpResponseMessage = http.GetAsync(AbouteRoutes.GetDetails);
-
-            
-
-            string mycontent = content.ReadAsStringAsync();
-            AboutUsModel[] items = JsonConvert.DeserializeObject<AboutUsModel[]>(mycontent);
-
-            foreach (var val in items)
-            {
-                //listuser.Add(val);
-                aboutUsPageModel.AboutUsModels.Add(val);
-            }
-            //var data = await  http.GetStringAsync(AbouteRoutes.GetDetails);
-            */
-
-            //return View(listuser);
-            //return View(aboutUsPageModel);
         }
     }
 }

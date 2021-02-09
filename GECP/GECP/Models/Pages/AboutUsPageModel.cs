@@ -13,11 +13,16 @@ namespace GECP.Models.Pages
         public MessageModel MsgCmtModel { get; set; }
 
         public IList<MessageModel> MsgCmtModels { get; set; }
+        public Alumni Alumni { get; set; }
+
+        public IList<Alumni> Alumnis { get; set; }
+
 
         public AboutUsPageModel()
         {
             AboutUsModels = new List<AboutUsModel>();
             MsgCmtModels = new List<MessageModel>();
+            Alumnis = new List<Alumni>();
         }
     }
 }

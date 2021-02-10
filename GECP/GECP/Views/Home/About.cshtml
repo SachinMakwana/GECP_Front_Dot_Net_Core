@@ -129,47 +129,94 @@
                 Alumuns Says
             </h2>
             <div class="line"></div>
+            @foreach (var item in Model.Result.Alumnis)
+            {
+                if (Model.Result.Alumnis.IndexOf(item) % 2 == 0)
+                {
+                    <div class="one_half animate" data-anim-type="fadeInLeft" data-anim-delay="200">
+                        <div class="bubble">
 
+                            <img src=@item.Image alt="" />
 
-            <div class="one_half animate" data-anim-type="fadeInLeft" data-anim-delay="200">
-                <div class="bubble">
+                            <p>
+                                @item.Feedback
+                            </p>
 
-                    <img src="~/images/peop-img27.jpg" alt="" />
+                            <div class="clearfix"></div>
+                        </div>
 
-                    <p>
-                        Generators on the Internet tend to repeat predefined chunks as necessary, making this the first true evere generator on the Internet. It uses a dictionary of over 200 Latin words, combined with generate Lorem Ipsum which looks
-                        reasonable. The generated Lorem Ipsum pass reasonable websites is therefore always.
-                    </p>
+                        <strong>
+                            @item.Name
+                        </strong>
 
-                    <div class="clearfix"></div>
-                </div>
+                    </div>
+                }
+            }
 
-                <strong>
-                    Michile Johnson
-                    <em>client websitename.com</em>
-                </strong>
+            @*<div class="one_half animate" data-anim-type="fadeInLeft" data-anim-delay="200">
+                    <div class="bubble">
 
-            </div>
+                        <img src="~/images/peop-img27.jpg" alt="" />
+
+                        <p>
+                            Generators on the Internet tend to repeat predefined chunks as necessary, making this the first true evere generator on the Internet. It uses a dictionary of over 200 Latin words, combined with generate Lorem Ipsum which looks
+                            reasonable. The generated Lorem Ipsum pass reasonable websites is therefore always.
+                        </p>
+
+                        <div class="clearfix"></div>
+                    </div>
+
+                    <strong>
+                        Michile Johnson
+                        <em>client websitename.com</em>
+                    </strong>
+
+                </div>*@
             <!--end section-->
-            <div class="one_half last animate" data-anim-type="fadeInRight" data-anim-delay="200">
-                <div class="bubble">
 
-                    <img src="~/images/peop-img28.jpg" alt="" />
+            @foreach (var item in Model.Result.Alumnis)
+            {
+                if (Model.Result.Alumnis.IndexOf(item) % 2 != 0)
+                {
+                    <div class="one_half last animate" data-anim-type="fadeInRight" data-anim-delay="200">
+                        <div class="bubble">
 
-                    <p>
-                        Generators on the Internet tend to repeat predefined chunks as necessary, making this the first true evere generator on the Internet. It uses a dictionary of over 200 Latin words, combined with generate Lorem Ipsum which looks
-                        reasonable. The generated Lorem Ipsum pass reasonable websites is therefore always.
-                    </p>
+                            <img src=@item.Image alt="" />
 
-                    <div class="clearfix"></div>
-                </div>
+                            <p>
+                                @item.Feedback
+                            </p>
 
-                <strong>
-                    Alana Kasandra
-                    <em>client websitename.com</em>
-                </strong>
+                            <div class="clearfix"></div>
+                        </div>
 
-            </div>
+                        <strong>
+                            @item.Name
+                        </strong>
+
+                    </div>
+                }
+            }
+
+            @*<div class="one_half last animate" data-anim-type="fadeInRight" data-anim-delay="200">
+                    <div class="bubble">
+
+                        <img src="~/images/peop-img28.jpg" alt="" />
+
+                        <p>
+                            Generators on the Internet tend to repeat predefined chunks as necessary, making this the first true evere generator on the Internet. It uses a dictionary of over 200 Latin words, combined with generate Lorem Ipsum which looks
+                            reasonable. The generated Lorem Ipsum pass reasonable websites is therefore always.
+                        </p>
+
+                        <div class="clearfix"></div>
+                    </div>
+
+                    <strong>
+                        Alana Kasandra
+                        <em>client websitename.com</em>
+                    </strong>
+
+                </div>*@
             <!--end section-->
         </div>
     </div>

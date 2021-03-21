@@ -16,9 +16,6 @@ namespace GECP.Controllers
         private readonly ILogger<HomeController> _logger;
         private IAboutUs _aboutUs;
 
-
-
-
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
@@ -38,7 +35,7 @@ namespace GECP.Controllers
         public IActionResult About()
         {
 
-            AboutUsPageModel abt = new AboutUsPageModel();
+            //AboutUsPageModel abt = new AboutUsPageModel();
             var obj = _aboutUs.getAboutUsPageDetail();
 
             return View(obj);

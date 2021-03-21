@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using GECP.Repository;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using GECP.Constants;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,19 +11,31 @@ namespace GECP.Controllers
 {
     public class DepartmentController : Controller
     {
+        private readonly ILogger<DepartmentController> _logger;
+        private IDepartment _department;
+
+        public DepartmentController(ILogger<DepartmentController> logger)
+        {
+            _logger = logger;
+            _department = new Department();
+        }
+
         public IActionResult Computer()
         {
-            return View();
+            var obj = _department.getDepartmentPageDetail((int)Common.DEPTCODES.CSE, (int)Common.Pages.CSE_Department);
+            return View(obj);
         }
 
         public IActionResult Ec()
         {
-            return View();
+            var obj = _department.getDepartmentPageDetail((int)Common.DEPTCODES.ECE, (int)Common.Pages.ECE_Department);
+            return View(obj);
         }
 
         public IActionResult Electrical()
         {
-            return View();
+            var obj = _department.getDepartmentPageDetail((int)Common.DEPTCODES.ELE, (int)Common.Pages.ELE_Department);
+            return View(obj);
         }
 
         public IActionResult Civil()

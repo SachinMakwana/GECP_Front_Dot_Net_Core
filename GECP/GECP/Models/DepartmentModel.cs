@@ -7,6 +7,7 @@ namespace GECP.Models
 {
     public class DepartmentModel
     {
+        public string _id { get; set; }
         public int code { get; set; }
         public string name { get; set; }
         public string ShortName { get; set; }

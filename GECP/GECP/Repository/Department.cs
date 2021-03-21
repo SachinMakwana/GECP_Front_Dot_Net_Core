@@ -37,6 +37,14 @@ namespace GECP.Repository
 
             departmentPageModel.MsgCmtModel = item;
 
+            //Vission Mission
+            HttpResponseMessage httpResponseVM = await http.GetAsync(CommonRoutes.GetVissionMission + "?PageId=" + items._id);
+            var VMContent = httpResponseVM.Content;
+            string myVMContent = await VMContent.ReadAsStringAsync();
+            VissionMission item2 = JsonConvert.DeserializeObject<VissionMission>(myVMContent);
+
+            departmentPageModel.VissionMissionModel= item2;
+
             return departmentPageModel;
         }
     }

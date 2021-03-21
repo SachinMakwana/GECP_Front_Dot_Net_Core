@@ -17,12 +17,15 @@ namespace GECP.Models.Pages
 
         public IList<Alumni> Alumnis { get; set; }
 
+        public VissionMission VissionMission { get; set; }
+
 
         public AboutUsPageModel()
         {
             AboutUsModels = new List<AboutUsModel>();
             MsgCmtModels = new List<MessageModel>();
             Alumnis = new List<Alumni>();
+            VissionMission = new VissionMission();
         }
     }
 }

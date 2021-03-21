@@ -19,25 +19,42 @@ namespace GECP.Repository
         { 
             var http = HttpClientFactory.Create();
             int id = (int)Pages.AboutUs;
+            AboutUsPageModel aboutUsPageModel = new AboutUsPageModel();
 
             //Message Of Committee
-            HttpResponseMessage httpResponseMessage = await http.GetAsync(AboutRoutes.GetMessageOFCommitte + "?PageId=" + id);
+            HttpResponseMessage httpResponseAbout = await http.GetAsync(AboutRoutes.GetAboutUsDetails);
+
+            var contentAbout = httpResponseAbout.Content;
+            string mycontentAbout = await contentAbout.ReadAsStringAsync();
+            AboutUsModel itemAbout = JsonConvert.DeserializeObject<AboutUsModel>(mycontentAbout);
+
+            aboutUsPageModel.AboutUsModel = itemAbout;
+
+            //Message Of Committee
+            HttpResponseMessage httpResponseMessage = await http.GetAsync(AboutRoutes.GetMessageOFCommitte + "?PageId=" + itemAbout._id);
 
             var content = httpResponseMessage.Content;
             string mycontent = await content.ReadAsStringAsync();
             MessageModel items = JsonConvert.DeserializeObject<MessageModel>(mycontent);
 
-            AboutUsPageModel aboutUsPageModel = new AboutUsPageModel();
             aboutUsPageModel.MsgCmtModel = items;
 
             //Feedback Of People
-            HttpResponseMessage httpResponsePeople = await http.GetAsync(AboutRoutes.GetAlumniDetails + "?PageId=" + id);
+            HttpResponseMessage httpResponsePeople = await http.GetAsync(AboutRoutes.GetAlumniDetails + "?PageId=" + itemAbout._id);
 
             var peopleContent = httpResponsePeople.Content;
             string myPeopleContent = await peopleContent.ReadAsStringAsync();
             List<Alumni> peopleitems = JsonConvert.DeserializeObject<List<Alumni>>(myPeopleContent);
 
             aboutUsPageModel.Alumnis = peopleitems;
+
+            //Vission Mission
+            HttpResponseMessage httpResponseVM = await http.GetAsync(CommonRoutes.GetVissionMission + "?PageId=" + itemAbout._id);
+            var VMContent = httpResponseVM.Content;
+            string myVMContent = await VMContent.ReadAsStringAsync();
+            VissionMission item2 = JsonConvert.DeserializeObject<VissionMission>(myVMContent);
+
+            aboutUsPageModel.VissionMission = item2;
 
             return aboutUsPageModel;
         }

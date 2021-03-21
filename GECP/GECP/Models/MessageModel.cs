@@ -10,7 +10,7 @@ namespace GECP.Models
         public string Image { get; set; }
         public string Title { get; set; }
         public string Message { get; set; }
-        public int PageId { get; set; }
+        public string PageId { get; set; }
         public DateTime createdAt { get; set; }
         public DateTime updatedAt { get; set; }
     }

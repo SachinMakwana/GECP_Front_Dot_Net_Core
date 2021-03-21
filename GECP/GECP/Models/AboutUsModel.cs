@@ -7,7 +7,7 @@ namespace GECP.Models
 {
     public class AboutUsModel
     {
-        public int _id { get; set; }
+        public string _id { get; set; }
         public string about_image { get; set; }
         public string about_description { get; set; }
         public DateTime createdAt { get; set; }

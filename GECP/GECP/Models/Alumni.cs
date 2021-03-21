@@ -11,6 +11,6 @@ namespace GECP.Models
         public string Name { get; set; }
         public string Feedback { get; set; }
         public string Type { get; set; }
-        public int PageId { get; set; }
+        public string PageId { get; set; }
     }
 }

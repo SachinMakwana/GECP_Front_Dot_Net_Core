@@ -8,7 +8,7 @@ namespace GECP.Repository
 {
     interface IDepartment
     {
-        public Task<DepartmentPageModel> getDepartmentPageDetail(int deptCode,int pageId);
+        public Task<DepartmentPageModel> getDepartmentPageDetail(int deptCode);
 
     }
 }

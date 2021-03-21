@@ -14,7 +14,7 @@ namespace GECP.Repository
 {
     public class Department : Common,IDepartment
     {
-        public async Task<DepartmentPageModel> getDepartmentPageDetail(int deptCode,int pageId)
+        public async Task<DepartmentPageModel> getDepartmentPageDetail(int deptCode)
         {
             var http = HttpClientFactory.Create();
 
@@ -29,7 +29,7 @@ namespace GECP.Repository
             departmentPageModel.DepartmentModel = items;
 
             //Message Of HOD
-            HttpResponseMessage httpResponsePeople = await http.GetAsync(CommonRoutes.GetMessageOFCommitte+ "?PageId=" + pageId);
+            HttpResponseMessage httpResponsePeople = await http.GetAsync(CommonRoutes.GetMessageOFCommitte+ "?PageId=" + items._id);
 
             var messageContent = httpResponsePeople.Content;
             string myPeopleContent = await messageContent.ReadAsStringAsync();

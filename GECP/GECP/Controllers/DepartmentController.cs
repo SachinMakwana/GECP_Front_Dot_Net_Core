@@ -22,19 +22,19 @@ namespace GECP.Controllers
 
         public IActionResult Computer()
         {
-            var obj = _department.getDepartmentPageDetail((int)Common.DEPTCODES.CSE, (int)Common.Pages.CSE_Department);
+            var obj = _department.getDepartmentPageDetail((int)Common.DEPTCODES.CSE);
             return View(obj);
         }
 
         public IActionResult Ec()
         {
-            var obj = _department.getDepartmentPageDetail((int)Common.DEPTCODES.ECE, (int)Common.Pages.ECE_Department);
+            var obj = _department.getDepartmentPageDetail((int)Common.DEPTCODES.ECE);
             return View(obj);
         }
 
         public IActionResult Electrical()
         {
-            var obj = _department.getDepartmentPageDetail((int)Common.DEPTCODES.ELE, (int)Common.Pages.ELE_Department);
+            var obj = _department.getDepartmentPageDetail((int)Common.DEPTCODES.ELE);
             return View(obj);
         }
 

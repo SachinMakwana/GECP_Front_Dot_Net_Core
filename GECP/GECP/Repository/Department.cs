@@ -17,6 +17,7 @@ namespace GECP.Repository
         public async Task<DepartmentPageModel> getDepartmentPageDetail(int deptCode)
         {
             var http = HttpClientFactory.Create();
+            DepartmentPageModel departmentPageModel = new DepartmentPageModel();
 
             //Department Details
             HttpResponseMessage httpResponseMessage = await http.GetAsync(DepartmentRoutes.GetDepartmentByCode+ "?code=" + deptCode);
@@ -25,7 +26,6 @@ namespace GECP.Repository
             string mycontent = await content.ReadAsStringAsync();
             DepartmentModel items = JsonConvert.DeserializeObject<DepartmentModel>(mycontent);
 
-            DepartmentPageModel departmentPageModel = new DepartmentPageModel();
             departmentPageModel.DepartmentModel = items;
 
             //Message Of HOD
@@ -44,7 +44,6 @@ namespace GECP.Repository
             VissionMission item2 = JsonConvert.DeserializeObject<VissionMission>(myVMContent);
 
             departmentPageModel.VissionMissionModel= item2;
-
             return departmentPageModel;
         }
     }

@@ -1,4 +1,6 @@
-﻿@{
+﻿@model Task<GECP.Models.Pages.DepartmentPageModel>
+
+@{
     ViewBag.Title = "Library";
 }
 <div class="page_title3">
@@ -82,18 +84,16 @@
     <div class="featured_section19">
         <div class="container">
 
-            <div class="who animate" data-anim-type="fadeInLeft" data-anim-delay="400"><img src="~/images/site-img16.png" alt="" /></div>
+            <div class="who animate" data-anim-type="fadeInLeft" data-anim-delay="400"><img  src=@Model.Result.MsgCmtModel.Image alt="" /></div>
 
             <div class="text animate" data-anim-type="fadeIn" data-anim-delay="500">
 
                 <h1>From The Chief Librarian</h1>
 
-                <p>
-                    Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for lorem ipsum evolved over the years somietimes by accident sometimes on purpose.
-                    <br /><br /> Where are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are Ipsum
-                    generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
+                <p class="bigtfont">
+                    @Model.Result.MsgCmtModel.Message
                 </p>
-                <h2>Darin Matthew.</h2>
+                @*<h2>Darin Matthew.</h2>*@
 
             </div>
 
@@ -110,7 +110,7 @@
                 <br /><br />
                 <h3 class="white">Vision</h3>
 
-                <p>Simply dummy text of the printing and typesettin industry has been the industrys standard dummy text where ever since the when printer took galley it to make a specimen book.</p>
+                <p>@Model.Result.VissionMissionModel.Vision</p>
                 <br /><br />
 
 
@@ -123,7 +123,7 @@
                 <br /><br />
                 <h3 class="white">Mission</h3>
 
-                <p>Simply dummy text of the printing and typesettin industry has been the industrys standard dummy text where ever since the when printer took galley it to make a specimen book.</p>
+                <p>@Model.Result.VissionMissionModel.Mission</p>
                 <br /><br />
 
 

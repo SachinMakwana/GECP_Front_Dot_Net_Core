@@ -1,4 +1,6 @@
-﻿@{
+﻿@model Task<GECP.Models.Pages.DepartmentPageModel>
+
+@{
     ViewBag.Title = "Electrical";
 }
 <div class="page_title3">
@@ -22,11 +24,11 @@
 
             <div id="owl-demo2" class="owl-carousel">
 
-                <div><img src="~/images/college.jpg" alt="" class="rimg"></div>
+                <div><img src="@Model.Result.DepartmentModel.image" alt="" class="rimg"></div>
 
-                <div><img src="~/images/college_gate.jpg" alt="" class="rimg"></div>
+                @*<div><img src="~/images/college_gate.jpg" alt="" class="rimg"></div>
 
-                <div><img src="~/images/convocation.jpg" alt="" class="rimg"></div>
+                    <div><img src="~/images/convocation.jpg" alt="" class="rimg"></div>*@
 
             </div>
 
@@ -36,16 +38,13 @@
         <div class="one_half last">
 
             <div class="stcode_title5">
-                <h3 class="nmb"><strong>Electrical</strong></h3>
+                <h3 class="nmb"><strong>@Model.Result.DepartmentModel.name</strong></h3>
             </div>
 
             <h5 class="gray">Will cover many web sites still in their infancy various versions have evo packages over the years.</h5>
 
             <p>
-                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage
-                of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator
-                on the Internet anything embarrassing hidden in the middle many web sites. generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful embarrassing hidden in the middle of model sentence structures,
-                to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always.
+                @Model.Result.DepartmentModel.about
             </p>
 
             <div class="clearfix marb12"></div>
@@ -63,7 +62,7 @@
             <div class="counters7 animate" data-anim-type="fadeIn" data-anim-delay="300">
 
                 <div class="one_fifth">
-                    <i class="fa fa-user"></i> <span id="target21">0</span>
+                    <i class="fa fa-user"></i> <span>@Model.Result.DepartmentModel.Intake</span>
                     <h4>Total Intake</h4>
                 </div>
                 <!-- end section -->
@@ -75,7 +74,7 @@
                 <!-- end section -->
 
                 <div class="one_fifth">
-                    <i class="fa fa-book"></i> <span id="target23">0</span>
+                    <i class="fa fa-book"></i> <span>@Model.Result.DepartmentModel.TotalSubject</span>
                     <h4>Total Subects</h4>
                 </div>
                 <!-- end section -->
@@ -98,6 +97,7 @@
 
         </div>
     </div>
+
     <!-- end parallax section 12 -->
     <div class="featured_section14">
         <div class="container">
@@ -108,7 +108,7 @@
                 <br /><br />
                 <h3 class="white">Vision</h3>
 
-                <p>Simply dummy text of the printing and typesettin industry has been the industrys standard dummy text where ever since the when printer took galley it to make a specimen book.</p>
+                <p>@Model.Result.VissionMissionModel.Vision</p>
                 <br /><br />
 
 
@@ -121,7 +121,7 @@
                 <br /><br />
                 <h3 class="white">Mission</h3>
 
-                <p>Simply dummy text of the printing and typesettin industry has been the industrys standard dummy text where ever since the when printer took galley it to make a specimen book.</p>
+                <p>@Model.Result.VissionMissionModel.Mission</p>
                 <br /><br />
 
 
@@ -136,29 +136,15 @@
     <div class="featured_section3 two">
         <div class="container">
 
-            <div class="onecol_forty"><img src="~/images/site-img16.png" alt="" class="rimg animate" data-anim-type="fadeInLeft" data-anim-delay="300" /></div>
+            <div class="onecol_forty"><img src=@Model.Result.MsgCmtModel.Image alt="" class="rimg animate" data-anim-type="fadeInLeft" data-anim-delay="300" /></div>
 
             <div class="onecol_sixty last animate" data-anim-type="fadeInRight" data-anim-delay="300">
                 <!-- <span><em>HOD Message</em>
                 <b>Start Creating a Whole Great</b> -->
-                <span> <strong class="color3">HOD MESSAGE</strong></span>
+                <span> <strong class="color3">@Model.Result.MsgCmtModel.Title</strong></span>
                 <p class="bigtfont">
-                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour randomised words enerators onthe Internet tend to repea predefined chunks as necessary making
-                    words combine with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable generated Lorem Ipsum is therefore always.
+                    @Model.Result.MsgCmtModel.Message
                 </p>
-                <p class="bigtfont">
-                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour randomised words enerators onthe Internet tend to repea predefined chunks as necessary making
-                    words combine with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable generated Lorem Ipsum is therefore always.
-                </p>
-                <p class="bigtfont">
-                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour randomised words enerators onthe Internet tend to repea predefined chunks as necessary making
-                    words combine with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable generated Lorem Ipsum is therefore always.
-                </p>
-                <p class="bigtfont">
-                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour randomised words enerators onthe Internet tend to repea predefined chunks as necessary making
-                    words combine with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable generated Lorem Ipsum is therefore always.
-                </p>
-
 
                 <br /><br /><br />
 
@@ -166,7 +152,9 @@
             </div>
 
         </div>
+
     </div>
+
     <!-- end featured section 3 -->
 
     <div id="slider-outline">

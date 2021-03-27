@@ -16,13 +16,25 @@ namespace GECP.Constants
             CSE_Department = 123,
             ELE_Department = 245,
             ECE_Department = 456,
+            CIVIL_Department = 200,
+            MECH_Department = 300,
+            LIBRARY = 400,
+            ADMIN = 100,
+            TEQ = 500
+
         }
 
         public enum DEPTCODES
         {
             CSE = 123,
             ELE = 245,
-            ECE = 456
+            ECE = 456,
+            CIVIL = 200,
+            MECH = 300,
+            LIBRARY = 400,
+            ADMIN = 100,
+            TEQ = 500
+
         }
     }
 

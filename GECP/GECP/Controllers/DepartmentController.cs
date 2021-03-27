@@ -40,27 +40,31 @@ namespace GECP.Controllers
 
         public IActionResult Civil()
         {
-            return View();
+            var obj = _department.getDepartmentPageDetail((int)Common.DEPTCODES.CIVIL);
+            return View(obj);
         }
 
         public IActionResult Mechanical()
         {
-            return View();
+            var obj = _department.getDepartmentPageDetail((int)Common.DEPTCODES.MECH);
+            return View(obj);
         }
 
         public IActionResult Library()
         {
-            return View();
+            var obj = _department.getDepartmentPageDetail((int)Common.DEPTCODES.LIBRARY);
+            return View(obj);
         }
 
         public IActionResult General()
         {
-            return View();
+            var obj = _department.getDepartmentPageDetail((int)Common.DEPTCODES.ADMIN);
+            return View(obj);
         }
-
         public IActionResult Teqip()
         {
-            return View();
+            var obj = _department.getDepartmentPageDetail((int)Common.DEPTCODES.TEQ);
+            return View(obj);
         }
     }
 }

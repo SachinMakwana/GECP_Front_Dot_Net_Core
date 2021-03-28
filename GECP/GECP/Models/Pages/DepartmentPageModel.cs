@@ -11,6 +11,7 @@ namespace GECP.Models.Pages
         public IList<DepartmentModel> DepartmentModels { get; set; }
         public MessageModel MsgCmtModel { get; set; }
         public VissionMission VissionMissionModel { get; set; }
+        public IList<FacultyDetailsModel> FacultyDetailsModel { get; set; }
 
         //public IList<MessageModel> MsgCmtModels { get; set; }
 
@@ -19,6 +20,7 @@ namespace GECP.Models.Pages
             DepartmentModels = new List<DepartmentModel>();
             MsgCmtModel = new MessageModel();
             VissionMissionModel = new VissionMission();
+            FacultyDetailsModel = new List<FacultyDetailsModel>();
         }
     }
 }

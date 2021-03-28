@@ -45,6 +45,16 @@ namespace GECP.Repository
 
             departmentPageModel.VissionMissionModel= item2;
             return departmentPageModel;
+
+            //Faculty Details
+            HttpResponseMessage httpResponseFD = await http.GetAsync(CommonRoutes.GetFacultyDetails + "?PageId=" + items._id);
+            var FDContent = httpResponseFD.Content;
+            string myFDContent = await FDContent.ReadAsStringAsync();
+            List<FacultyDetailsModel> item3 = JsonConvert.DeserializeObject<List<FacultyDetailsModel>>(myFDContent);
+
+            departmentPageModel.FacultyDetailsModel =item3;
+            return departmentPageModel;
+
         }
     }
 }

@@ -141,15 +141,6 @@ D:\GECP Frontend C#\GECP\GECP\obj\Debug\netcoreapp3.1\Razor\Views\CampusLife\Cam
 D:\GECP Frontend C#\GECP\GECP\obj\Debug\netcoreapp3.1\Razor\Views\Home\ContactUs.cshtml.g.cs
 D:\GECP Frontend C#\GECP\GECP\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Footer.cshtml.g.cs
 D:\GECP Frontend C#\GECP\GECP\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Header.cshtml.g.cs
-C:\Users\darji\Documents\GitHub\GECP_Front_Dot_Net_Core\GECP\GECP\obj\Debug\netcoreapp3.1\GECP.csprojAssemblyReference.cache
-C:\Users\darji\Documents\GitHub\GECP_Front_Dot_Net_Core\GECP\GECP\obj\Debug\netcoreapp3.1\GECP.AssemblyInfoInputs.cache
-C:\Users\darji\Documents\GitHub\GECP_Front_Dot_Net_Core\GECP\GECP\obj\Debug\netcoreapp3.1\GECP.AssemblyInfo.cs
-C:\Users\darji\Documents\GitHub\GECP_Front_Dot_Net_Core\GECP\GECP\obj\Debug\netcoreapp3.1\GECP.csproj.CoreCompileInputs.cache
-C:\Users\darji\Documents\GitHub\GECP_Front_Dot_Net_Core\GECP\GECP\obj\Debug\netcoreapp3.1\GECP.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\darji\Documents\GitHub\GECP_Front_Dot_Net_Core\GECP\GECP\obj\Debug\netcoreapp3.1\GECP.RazorAssemblyInfo.cache
-C:\Users\darji\Documents\GitHub\GECP_Front_Dot_Net_Core\GECP\GECP\obj\Debug\netcoreapp3.1\GECP.RazorAssemblyInfo.cs
-C:\Users\darji\Documents\GitHub\GECP_Front_Dot_Net_Core\GECP\GECP\obj\Debug\netcoreapp3.1\GECP.dll
-C:\Users\darji\Documents\GitHub\GECP_Front_Dot_Net_Core\GECP\GECP\obj\Debug\netcoreapp3.1\GECP.pdb
 C:\Users\darji\Documents\GitHub\GECP_Front_Dot_Net_Core\GECP\GECP\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\darji\Documents\GitHub\GECP_Front_Dot_Net_Core\GECP\GECP\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\darji\Documents\GitHub\GECP_Front_Dot_Net_Core\GECP\GECP\bin\Debug\netcoreapp3.1\GECP.exe
@@ -235,6 +226,12 @@ C:\Users\darji\Documents\GitHub\GECP_Front_Dot_Net_Core\GECP\GECP\bin\Debug\netc
 C:\Users\darji\Documents\GitHub\GECP_Front_Dot_Net_Core\GECP\GECP\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\darji\Documents\GitHub\GECP_Front_Dot_Net_Core\GECP\GECP\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\darji\Documents\GitHub\GECP_Front_Dot_Net_Core\GECP\GECP\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\darji\Documents\GitHub\GECP_Front_Dot_Net_Core\GECP\GECP\obj\Debug\netcoreapp3.1\GECP.AssemblyInfoInputs.cache
+C:\Users\darji\Documents\GitHub\GECP_Front_Dot_Net_Core\GECP\GECP\obj\Debug\netcoreapp3.1\GECP.AssemblyInfo.cs
+C:\Users\darji\Documents\GitHub\GECP_Front_Dot_Net_Core\GECP\GECP\obj\Debug\netcoreapp3.1\GECP.csproj.CoreCompileInputs.cache
+C:\Users\darji\Documents\GitHub\GECP_Front_Dot_Net_Core\GECP\GECP\obj\Debug\netcoreapp3.1\GECP.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\darji\Documents\GitHub\GECP_Front_Dot_Net_Core\GECP\GECP\obj\Debug\netcoreapp3.1\GECP.RazorAssemblyInfo.cache
+C:\Users\darji\Documents\GitHub\GECP_Front_Dot_Net_Core\GECP\GECP\obj\Debug\netcoreapp3.1\GECP.RazorAssemblyInfo.cs
 C:\Users\darji\Documents\GitHub\GECP_Front_Dot_Net_Core\GECP\GECP\obj\Debug\netcoreapp3.1\staticwebassets\GECP.StaticWebAssets.Manifest.cache
 C:\Users\darji\Documents\GitHub\GECP_Front_Dot_Net_Core\GECP\GECP\obj\Debug\netcoreapp3.1\staticwebassets\GECP.StaticWebAssets.xml
 C:\Users\darji\Documents\GitHub\GECP_Front_Dot_Net_Core\GECP\GECP\obj\Debug\netcoreapp3.1\scopedcss\bundle\GECP.styles.css
@@ -285,4 +282,6 @@ C:\Users\darji\Documents\GitHub\GECP_Front_Dot_Net_Core\GECP\GECP\obj\Debug\netc
 C:\Users\darji\Documents\GitHub\GECP_Front_Dot_Net_Core\GECP\GECP\obj\Debug\netcoreapp3.1\GECP.RazorTargetAssemblyInfo.cs
 C:\Users\darji\Documents\GitHub\GECP_Front_Dot_Net_Core\GECP\GECP\obj\Debug\netcoreapp3.1\GECP.Views.pdb
 C:\Users\darji\Documents\GitHub\GECP_Front_Dot_Net_Core\GECP\GECP\obj\Debug\netcoreapp3.1\GECP.csproj.CopyComplete
+C:\Users\darji\Documents\GitHub\GECP_Front_Dot_Net_Core\GECP\GECP\obj\Debug\netcoreapp3.1\GECP.dll
+C:\Users\darji\Documents\GitHub\GECP_Front_Dot_Net_Core\GECP\GECP\obj\Debug\netcoreapp3.1\GECP.pdb
 C:\Users\darji\Documents\GitHub\GECP_Front_Dot_Net_Core\GECP\GECP\obj\Debug\netcoreapp3.1\GECP.genruntimeconfig.cache

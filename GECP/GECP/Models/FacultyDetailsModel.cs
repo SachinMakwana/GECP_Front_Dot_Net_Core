@@ -11,5 +11,8 @@ namespace GECP.Models
         public string designation { get; set; }
         public string profileImage { get; set; }
         public string name { get; set; }
+        public string qualification { get; set; }
+        public string experience { get; set; }
+        public string areaOfInterest { get; set; }
     }
 }

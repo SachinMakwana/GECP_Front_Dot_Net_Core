@@ -12,7 +12,7 @@ using Newtonsoft.Json;
 
 namespace GECP.Repository
 {
-    public class Department : Common,IDepartment
+    public class Department : Common, IDepartment
     {
         public async Task<DepartmentPageModel> getDepartmentPageDetail(int deptCode)
         {
@@ -20,7 +20,7 @@ namespace GECP.Repository
             DepartmentPageModel departmentPageModel = new DepartmentPageModel();
 
             //Department Details
-            HttpResponseMessage httpResponseMessage = await http.GetAsync(DepartmentRoutes.GetDepartmentByCode+ "?code=" + deptCode);
+            HttpResponseMessage httpResponseMessage = await http.GetAsync(DepartmentRoutes.GetDepartmentByCode + "?code=" + deptCode);
 
             var content = httpResponseMessage.Content;
             string mycontent = await content.ReadAsStringAsync();
@@ -29,7 +29,7 @@ namespace GECP.Repository
             departmentPageModel.DepartmentModel = items;
 
             //Message Of HOD
-            HttpResponseMessage httpResponsePeople = await http.GetAsync(CommonRoutes.GetMessageOFCommitte+ "?PageId=" + items._id);
+            HttpResponseMessage httpResponsePeople = await http.GetAsync(CommonRoutes.GetMessageOFCommitte + "?PageId=" + items._id);
 
             var messageContent = httpResponsePeople.Content;
             string myPeopleContent = await messageContent.ReadAsStringAsync();
@@ -43,8 +43,18 @@ namespace GECP.Repository
             string myVMContent = await VMContent.ReadAsStringAsync();
             VissionMission item2 = JsonConvert.DeserializeObject<VissionMission>(myVMContent);
 
-            departmentPageModel.VissionMissionModel= item2;
+            departmentPageModel.VissionMissionModel = item2;
+
+            //Faculty Details
+            var url = CommonRoutes.GetFacultyDetails + "?deptCode=" + items._id;
+            HttpResponseMessage httpResponseFD = await http.GetAsync(CommonRoutes.GetFacultyDetails + "?deptCode=" + items._id);
+            var FDContent = httpResponseFD.Content;
+            string myFDContent = await FDContent.ReadAsStringAsync();
+            List<FacultyDetailsModel> item3 = JsonConvert.DeserializeObject<List<FacultyDetailsModel>>(myFDContent);
+
+            departmentPageModel.FacultyDetailsModel = item3;
             return departmentPageModel;
+
         }
     }
 }

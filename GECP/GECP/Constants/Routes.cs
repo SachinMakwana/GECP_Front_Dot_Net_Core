@@ -23,6 +23,7 @@ namespace GECP.Constants
             public static string GetMessageOFCommitte => BaseURL + "/getMessage";
             public static string GetVissionMission => BaseURL + "/getVissionMission";
             public static string GetAlumniDetails => BaseURL + "/getAlumnis";
+            public static string GetFacultyDetails => BaseURL + "/facultyByDept";
         }
 
         public class DepartmentRoutes

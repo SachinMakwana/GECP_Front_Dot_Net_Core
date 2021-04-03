@@ -162,8 +162,22 @@
 
                 <div id="sl-wrap">
 
+                    @foreach (var item in Model.Result.FacultyDetailsModel)
+                    {
 
-                    <div class="sl-div two">
+                        <div class="sl-div two">
+
+                            <div class="cirpimg"><img src=@item.profileImage alt="" /></div>
+                            <h4 class="roboto">@item.name<em></em></h4>
+                            <h4 class="roboto">@item.designation<em></em></h4>
+                            <br />
+                            <a href="cse_faculty.html" class="but_calendar"><i class="fa fa-hand-o-right fa-lg"></i></a>
+
+                        </div>
+
+                    }
+
+                    <!--<div class="sl-div two">
 
                         <div class="cirpimg"><img src="~/images/peop-img30.jpg" alt="" /></div>
                         <h4 class="roboto">Steve Johnsondeo <em></em></h4>
@@ -171,10 +185,10 @@
                         <br />
                         <a href="cse_faculty.html" class="but_calendar"><i class="fa fa-hand-o-right fa-lg"></i>&nbsp; Read more</a>
 
-                    </div>
+                    </div>-->
                     <!-- end section -->
 
-                    <div class="sl-div two">
+                    <!--<div class="sl-div two">
 
                         <div class="cirpimg"><img src="~/images/peop-img31.jpg" alt="" /></div>
                         <h4 class="roboto">Steve Johnsondeo <em></em></h4>
@@ -182,10 +196,10 @@
                         <br />
                         <a href="cse_faculty.html" class="but_calendar"><i class="fa fa-hand-o-right fa-lg"></i>&nbsp; Read more</a>
 
-                    </div>
+                    </div>-->
                     <!-- end section -->
 
-                    <div class="sl-div two">
+                    <!--<div class="sl-div two">
 
                         <div class="cirpimg"><img src="~/images/peop-img29.jpg" alt="" /></div>
                         <h4 class="roboto">Steve Johnsondeo <em></em></h4>
@@ -193,10 +207,10 @@
                         <br />
                         <a href="cse_faculty.html" class="but_calendar"><i class="fa fa-hand-o-right fa-lg"></i>&nbsp; Read more</a>
 
-                    </div>
+                    </div>-->
                     <!-- end section -->
 
-                    <div class="sl-div two">
+                    <!--<div class="sl-div two">
 
                         <div class="cirpimg"><img src="~/images/peop-img32.jpg" alt="" /></div>
                         <h4 class="roboto">Steve Johnsondeo <em></em></h4>
@@ -204,7 +218,7 @@
                         <br />
                         <a href="cse_faculty.html" class="but_calendar"><i class="fa fa-hand-o-right fa-lg"></i>&nbsp; Read more</a>
 
-                    </div>
+                    </div>-->
                     <!-- end section -->
 
                 </div>

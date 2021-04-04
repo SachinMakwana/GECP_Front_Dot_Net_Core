@@ -20,8 +20,7 @@ namespace GECP.Constants
             MECH_Department = 300,
             LIBRARY = 400,
             ADMIN = 100,
-            TEQ = 500
-
+            TEQ = 500,
         }
 
         public enum DEPTCODES
@@ -36,6 +35,7 @@ namespace GECP.Constants
             TEQ = 500
 
         }
+
     }
 
 }

@@ -26,6 +26,22 @@ namespace GECP.Constants
             public static string GetFacultyDetails => BaseURL + "/facultyByDept";
         }
 
+        public class CommitteesRoutes
+        {
+            public static string GetPlacementCellDetails => BaseURL + "/placementDetails";
+
+            public static string GetAntiRaggingCellDetails => BaseURL + "/anti_ragging_details";
+
+            public static string GetNssCellDetails => BaseURL + "/nssDetails";
+
+            public static string GetGrievenceCellDetails => BaseURL + "/grievence_details";
+
+            public static string GetSsipCellDetails => BaseURL + "/ssip_details";
+
+            public static string GetWomenCellDetails => BaseURL + "/womendetail";
+
+        }
+
         public class DepartmentRoutes
         {
             public static string GetDepartmentByCode => BaseURL + "/departmentByCode";

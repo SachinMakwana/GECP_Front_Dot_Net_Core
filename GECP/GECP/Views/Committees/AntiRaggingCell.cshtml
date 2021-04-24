@@ -1,4 +1,6 @@
-﻿@{
+﻿@model Task<GECP.Models.Pages.BasicCellDetailsPageModel>
+
+@{
     ViewBag.Title = "AntiRaggingCell";
 }
 <div class="page_title3">
@@ -26,8 +28,7 @@
 
                 <h4 class="color3 margin_bottom2">GECP Anti Ragging</h4>
                 <p class="bigtfont">
-                    Making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is
-                    therefore always.
+                    @Model.Result.BasicCellDetailsModel.description
                 </p>
 
             </div>
@@ -35,7 +36,7 @@
 
             <div class="one_third">
 
-                <img src="~/images/Anti-Ragging.png" alt="" width="358.6" height="199.783">
+                <img src="@Model.Result.BasicCellDetailsModel.image" alt="" width="358.6" height="199.783">
 
             </div>
             <!-- end section -->
@@ -44,8 +45,7 @@
 
                 <h4 class="color3 margin_bottom2">GECP Measures</h4>
                 <p class="bigtfont">
-                    Making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is
-                    therefore always.
+                    @Model.Result.BasicCellDetailsModel.measure
                 </p>
 
             </div>
@@ -65,7 +65,7 @@
             <br /><br />
             <h3 class="white">Vision</h3>
 
-            <p>Simply dummy text of the printing and typesettin industry has been the industrys standard dummy text where ever since the when printer took galley it to make a specimen book.</p>
+            <p>@Model.Result.vissionMissionModel.Vision</p>
             <br /><br />
 
 
@@ -78,7 +78,7 @@
             <br /><br />
             <h3 class="white">Mission</h3>
 
-            <p>Simply dummy text of the printing and typesettin industry has been the industrys standard dummy text where ever since the when printer took galley it to make a specimen book.</p>
+            <p>@Model.Result.vissionMissionModel.Mission</p>
             <br /><br />
 
 
@@ -178,10 +178,9 @@
             <h1>Anti Ragging Head Message</h1>
 
             <p>
-                Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for lorem ipsum evolved over the years somietimes by accident sometimes on purpose.
-                <br /><br /> Where are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are Ipsum
-                generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
+                @Model.Result.MsgCmtModel.Message
             </p>
+
             <h2>Darin Matthew.</h2>
 
         </div>

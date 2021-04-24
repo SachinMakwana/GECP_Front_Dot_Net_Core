@@ -46,7 +46,6 @@ namespace GECP.Repository
             departmentPageModel.VissionMissionModel = item2;
 
             //Faculty Details
-            var url = CommonRoutes.GetFacultyDetails + "?deptCode=" + items._id;
             HttpResponseMessage httpResponseFD = await http.GetAsync(CommonRoutes.GetFacultyDetails + "?deptCode=" + items._id);
             var FDContent = httpResponseFD.Content;
             string myFDContent = await FDContent.ReadAsStringAsync();

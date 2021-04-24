@@ -46,5 +46,10 @@ namespace GECP.Constants
         {
             public static string GetDepartmentByCode => BaseURL + "/departmentByCode";
         }
+
+        public class GalleryRoutes
+        {
+            public static string GetGalleryResponse => BaseURL + "/gallery";
+        }
     }
 }

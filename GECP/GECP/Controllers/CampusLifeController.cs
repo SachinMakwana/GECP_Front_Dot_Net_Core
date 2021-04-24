@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using GECP.Repository;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +10,19 @@ namespace GECP.Controllers
 {
     public class CampusLifeController : Controller
     {
+        private readonly ILogger<DepartmentController> _logger;
+        private IGallery _gallery;
+
+        public CampusLifeController(ILogger<DepartmentController> logger)
+        {
+            _logger = logger;
+            _gallery = new Gallery();
+        }
+
         public IActionResult Gallery()
         {
-            return View();
+            var obj = _gallery.getGalleryPageDetail();
+            return View(obj);
         }
 
         public IActionResult Canteen()

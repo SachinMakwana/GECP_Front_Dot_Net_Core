@@ -9,5 +9,6 @@ namespace GECP.Repository
     interface IGallery
     {
         public Task<GalleryPageModel> getGalleryPageDetail();
+
     }
 }

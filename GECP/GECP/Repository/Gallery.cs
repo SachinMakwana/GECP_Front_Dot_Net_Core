@@ -19,18 +19,19 @@ namespace GECP.Repository
             var http = HttpClientFactory.Create();
             GalleryPageModel galleryPageModel = new GalleryPageModel();
 
-            //Department Details
+            //Get All Gallery Images
             HttpResponseMessage httpResponseMessage = await http.GetAsync(GalleryRoutes.GetGalleryResponse);
 
             var content = httpResponseMessage.Content;
             string mycontent = await content.ReadAsStringAsync();
             GalleryModel items = JsonConvert.DeserializeObject<GalleryModel>(mycontent);
 
-            galleryPageModel.ResModel = items;
+            galleryPageModel.ImageResModel = items;
             galleryPageModel.CategoryModels = items.categoryClass;
             galleryPageModel.GalleryModels = items.data;
             return galleryPageModel;
 
         }
+
     }
 }

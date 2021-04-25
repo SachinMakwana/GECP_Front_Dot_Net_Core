@@ -52,8 +52,18 @@ namespace GECP.Repository
             List<FacultyDetailsModel> item3 = JsonConvert.DeserializeObject<List<FacultyDetailsModel>>(myFDContent);
 
             departmentPageModel.FacultyDetailsModel = item3;
-            return departmentPageModel;
 
+            //Get Images
+            HttpResponseMessage httpResponseImage = await http.GetAsync(GalleryRoutes.GetImageByPageIdResponse + "?PageId=" + items._id);
+
+            var contentImages = httpResponseImage.Content;
+            string myImageContent = await contentImages.ReadAsStringAsync();
+            GalleryModel itemsRes = JsonConvert.DeserializeObject<GalleryModel>(myImageContent);
+
+            departmentPageModel.ImageResModel = itemsRes;
+            departmentPageModel.CategoryModels = itemsRes.categoryClass;
+            departmentPageModel.GalleryModels = itemsRes.data;
+            return departmentPageModel;
         }
     }
 }

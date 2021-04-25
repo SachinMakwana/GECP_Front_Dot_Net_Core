@@ -50,6 +50,8 @@ namespace GECP.Constants
         public class GalleryRoutes
         {
             public static string GetGalleryResponse => BaseURL + "/gallery";
+            public static string GetImageByPageIdResponse => BaseURL + "/image";
+
         }
     }
 }

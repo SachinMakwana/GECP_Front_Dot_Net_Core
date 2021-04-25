@@ -37,6 +37,10 @@ namespace GECP.Repository
             basicCellDetailsPageModel.vissionMissionModel = getVissionMissionDetails(basicCellDetailsPageModel.BasicCellDetailsModel._id).Result;
             //Head Message
             basicCellDetailsPageModel.MsgCmtModel = getMessageDetails(basicCellDetailsPageModel.BasicCellDetailsModel._id).Result;
+            //Get Images
+            basicCellDetailsPageModel.ImageResModel = getImageByPageId(basicCellDetailsPageModel.BasicCellDetailsModel._id).Result;
+            basicCellDetailsPageModel.CategoryModels = basicCellDetailsPageModel.ImageResModel.categoryClass;
+            basicCellDetailsPageModel.GalleryModels = basicCellDetailsPageModel.ImageResModel.data;
             return basicCellDetailsPageModel;
         }
 
@@ -63,6 +67,10 @@ namespace GECP.Repository
             basicCellDetailsPageModel.vissionMissionModel = getVissionMissionDetails(basicCellDetailsPageModel.BasicCellDetailsModel._id).Result;
             //Head Message
             basicCellDetailsPageModel.MsgCmtModel = getMessageDetails(basicCellDetailsPageModel.BasicCellDetailsModel._id).Result;
+            //Get Images
+            basicCellDetailsPageModel.ImageResModel = getImageByPageId(basicCellDetailsPageModel.BasicCellDetailsModel._id).Result;
+            basicCellDetailsPageModel.CategoryModels = basicCellDetailsPageModel.ImageResModel.categoryClass;
+            basicCellDetailsPageModel.GalleryModels = basicCellDetailsPageModel.ImageResModel.data;
             return basicCellDetailsPageModel;
         }
 
@@ -89,6 +97,10 @@ namespace GECP.Repository
             basicCellDetailsPageModel.vissionMissionModel = getVissionMissionDetails(basicCellDetailsPageModel.BasicCellDetailsModel._id).Result;
             //Head Message
             basicCellDetailsPageModel.MsgCmtModel = getMessageDetails(basicCellDetailsPageModel.BasicCellDetailsModel._id).Result;
+            //Get Images
+            basicCellDetailsPageModel.ImageResModel = getImageByPageId(basicCellDetailsPageModel.BasicCellDetailsModel._id).Result;
+            basicCellDetailsPageModel.CategoryModels = basicCellDetailsPageModel.ImageResModel.categoryClass;
+            basicCellDetailsPageModel.GalleryModels = basicCellDetailsPageModel.ImageResModel.data;
             return basicCellDetailsPageModel;
         }
 
@@ -129,5 +141,18 @@ namespace GECP.Repository
             return item;
         }
 
+        private async Task<GalleryModel> getImageByPageId(string pageId)
+        {
+            var http = HttpClientFactory.Create();
+
+            //Get Images
+            HttpResponseMessage httpResponseImage = await http.GetAsync(GalleryRoutes.GetImageByPageIdResponse + "?PageId=" + pageId);
+
+            var contentImages = httpResponseImage.Content;
+            string myImageContent = await contentImages.ReadAsStringAsync();
+            GalleryModel itemsRes = JsonConvert.DeserializeObject<GalleryModel>(myImageContent);
+
+            return itemsRes;
+        }
     }
 }

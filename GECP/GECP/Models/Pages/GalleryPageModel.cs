@@ -7,14 +7,14 @@ namespace GECP.Models.Pages
 {
     public class GalleryPageModel
     {
-        public GalleryModel ResModel { get; set; }
+        public GalleryModel ImageResModel { get; set; }
         public IList<IndividualImage> GalleryModels { get; set; }
 
         public IList<CategoryClass> CategoryModels { get; set; }
 
         public GalleryPageModel()
         {
-            ResModel = new GalleryModel();
+            ImageResModel = new GalleryModel();
             GalleryModels = new List<IndividualImage>();
             CategoryModels = new List<CategoryClass>();
 

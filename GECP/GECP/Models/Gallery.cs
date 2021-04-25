@@ -23,6 +23,7 @@ namespace GECP.Models
         public string title { get; set; }
         public string category { get; set; }
         public string image { get; set; }
+        public string PageId { get; set; }
         public string categoryClass { get; set; }
     }
 }
